@@ -1,0 +1,88 @@
+@font-face {
+font-family: Inter; 
+src: url('Font/Inter-Regular.ttf'); 
+}
+body{
+    font-family: Inter;
+    background-color: #2f3440;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+#piano {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+  }
+
+  .key {
+    width: 60px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+    margin-right: 2px;
+    border-radius: 10%;
+    position: relative; 
+    z-index: 1; 
+    }
+
+    .key-sharp {
+    width: 40px;
+    height: 120px;
+    border: 1px solid black;
+    background-color: black;
+    margin-right: 2px;
+    position: absolute; 
+    z-index: 2; 
+    top: 0;
+    border-radius: 10%;
+    }
+
+    .key-sharp-1 {
+        left: 40px;
+    }
+    
+    .key-sharp-2 {
+        left: 105px;
+    }
+    
+    .key-sharp-3 {
+        left: 235px;
+    }
+    
+    .key-sharp-4 {
+        left: 300px;
+    }
+    
+    .key-sharp-5 {
+        left: 365px;
+    }
+
+    .key span, .key-sharp span {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: #000;
+        font-family: Inter;
+    }
+    
+    .key-sharp span {
+        color: #fff;
+    }
+    
+    .key, .key-sharp {
+        transition: transform 0.07s ease; /* Add this line */
+    }
+    
+    .key.active, .key-sharp.active {
+        transform: scale(.95);
+        border-color: #028ae9;
+        box-shadow: 0 0 1rem #028ae9;
+    }
